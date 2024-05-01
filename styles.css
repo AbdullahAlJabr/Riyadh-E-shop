@@ -1,0 +1,244 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(to right, #fa709a, #fee140);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.icon {
+  display: none; /* Initially hide for larger screens */
+}
+
+.nav-toggle {
+  display: none; /* Initially hide for larger screens */
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+section {
+  padding: 100px 0;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Home Page Styles */
+#home {
+  background: linear-gradient(to right bottom, #ff5f6d, #ffc371);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+#home h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 20px;
+}
+
+/* About Us Page Styles */
+#about {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about ul {
+  list-style: none;
+  padding: 0;
+}
+
+#about ul li {
+  margin-bottom: 10px;
+}
+
+/* Products Page Styles */
+#products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 50px 0;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+}
+
+/* Contact Page Styles */
+#contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Adjusted padding */
+    flex-direction: column; /* Adjusted direction for smaller screens */
+    align-items: flex-start; /* Align items to start for smaller screens */
+  }
+
+  .logo img {
+    height: 30px; /* Reduced logo size for smaller screens */
+  }
+
+  .icon {
+    display: block; /* Display icon for smaller screens */
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin to separate icon from logo */
+  }
+
+  .nav-toggle {
+    display: none; /* Hide toggle button initially */
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none; /* Hide nav menu by default for smaller screens */
+    width: 100%; /* Make nav full width */
+    padding: 10px 0;
+  }
+
+  nav.open {
+    display: flex; /* Show nav menu when open */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #ddd;
+  }
+}
